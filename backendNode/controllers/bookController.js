@@ -1,11 +1,12 @@
 const Book = require('../model/book');
-
+const fileError = require('../utils/fileError');
 exports.createBook = async (req, res) => {
   try {
     let book = await Book.create(req.body);
 
     res.status(201).json({ success: true, book });
   } catch (error) {
+    fileError(error);
     res.status(400).json({ success: false, message: error });
   }
 };
@@ -16,6 +17,7 @@ exports.getAllBook = async (req, res) => {
 
     res.status(201).json({ success: true, book });
   } catch (error) {
+    fileError(error);
     res.status(500).json({ success: false, message: error });
   }
 };
@@ -31,6 +33,7 @@ exports.getByIdBook = async (req, res) => {
     }
     res.status(201).json({ success: true, book });
   } catch (error) {
+    fileError(error);
     res.status(500).json({ success: false, message: error.message });
   }
 };
@@ -47,6 +50,7 @@ exports.updateBook = async (req, res) => {
     book = await Book.findByIdAndUpdate(_id, req.body, { new: true });
     res.status(201).json({ success: true, message: 'book updated', book });
   } catch (error) {
+    fileError(error);
     res.status(400).json({ success: false, message: error.message });
   }
 };
@@ -65,6 +69,7 @@ exports.deleteBook = async (req, res) => {
       .status(201)
       .json({ success: true, message: `id: ${_id} with this book deleted` });
   } catch (error) {
+    fileError(error);
     res.status(500).json({ success: false, message: error.message });
   }
 };

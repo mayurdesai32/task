@@ -1,5 +1,5 @@
 require('dotenv').config({ path: './utils/config.env' });
-
+const fileError = require('./utils/fileError');
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
@@ -22,6 +22,7 @@ server = app.listen(port, () => {
 
 // for handling error
 process.on('unhandledRejection', (err) => {
+  fileError(err);
   console.log(`Error:${err.message}`);
   console.log(`Shutting down the server due to Unhandled Promise Rejection`);
   server.close(() => {

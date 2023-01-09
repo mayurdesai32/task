@@ -1,0 +1,9 @@
+custom errorlog:- with error ValidationError: img: Please Enter Book Image url on time 16,73,27,27,05,576custom errorlog:- with error ValidationError: img: Please Enter Book Image url on time 16,73,27,30,35,648custom errorlog:- with error ValidationError: img: Please Enter Book Image url on time 16,73,27,30,79,524 /ncustom errorlog:- with error ValidationError: img: Please Enter Book Image url on time 16,73,27,31,59,592 
+custom errorlog:- with error ValidationError: img: Please Enter Book Image url on time 16,73,27,31,83,084 
+custom errorlog:- with error ValidationError: name: Please Enter Book Name 100 char less than  on time 16,73,27,33,04,232 
+custom errorlog:- with error ValidationError: name: Please Enter Book Name 100 char less than  on time 16,73,27,33,06,373 
+custom errorlog:- with error CastError: Cast to ObjectId failed for value "{ _id: '63bc1632270a610dc526b696\n' }" (type Object) at path "_id" for model "Book" on time 16,73,27,33,67,300 
+custom errorlog:- with error CastError: Cast to ObjectId failed for value "{ _id: '63bc2008cb015fc61c1ec880\n' }" (type Object) at path "_id" for model "Book" on time 16,73,27,33,72,401 
+custom errorlog:- with error Error: book not found by this id: 63bc2008cb015fc61c1ec880 on time 16,73,27,34,11,916 
+custom errorlog:- with error Error: book not found by this id: 63bc2008cb015fc61c1ec880 on time 16,73,27,34,15,399 
+custom errorlog:- with error CastError: Cast to ObjectId failed for value "{ _id: '63bc2008cb015fc61c1ec880\n' }" (type Object) at path "_id" for model "Book" on time 16,73,27,34,19,099 
